@@ -1,9 +1,12 @@
 .content {
-  height: 50px;
-  width: 600px;
   padding-left: 25px;
 }
 img {
   width: 100px;
   height: 100px;
+}
+@media only screen and (max-width : 992px) {
+  h3 {
+    font-size: 15px;
+  }
 }

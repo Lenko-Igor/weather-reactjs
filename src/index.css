@@ -5,8 +5,8 @@
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
 }
 .container {
@@ -16,7 +16,6 @@ body {
 }
 .wrapper {
   display: flex;
-  justify-content: center;
   padding-top: 15px;
 }
 h1 {
@@ -27,3 +26,13 @@ h1 span {
   font-weight: normal;
   font-size: 25px;
 }
+@media only screen and (max-width : 992px)  {
+  .container {
+    width: 600px;
+  }
+}
+/* @media only screen and (max-width : 768px) {
+  .container {
+    width: 600px;
+  }
+} */
