@@ -1,0 +1,25 @@
+li {
+  padding: 2px 0;
+}
+button {
+  font-family: 'Roboto', sans-serif;
+  width: 160px;
+  height: 35px;
+  margin: 0 auto;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+button:hover {
+  background-color: grey;
+  color: white;
+}
+button:focus {
+  outline: 0;
+}
+.color{
+  background-color: grey;
+  color: white;
+}

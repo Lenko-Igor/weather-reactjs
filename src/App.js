@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
+import ListCitys from './components/ListCitys.js'
+import Content from './components/Content.js'
+import Context from './context.js'
 
 function App() {
+  const PLACES = [
+      { name: "Минск",   cityID: "625144"},
+      { name: "Гомель",  cityID: "627907"},
+      { name: "Брест",   cityID: "629634"},
+      { name: "Гродно",  cityID: "627904"},
+      { name: "Витебск", cityID: "620127"},
+      { name: "Могилев", cityID: "625665"},
+  ]
+
+  const [activePlace, setActivPlace] = useState(0)
+  
+  function removeContent(index){
+    setActivPlace(index)
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context.Provider value={{removeContent, activePlace}}>
+      <div className="container">
+        <h1>Погода в Республике Беларусь<br/>
+        <span>(из сервиса openweathermap)</span>
+        </h1>
+        <hr/>
+        <div className='wrapper'>
+          <ListCitys citys={PLACES}/>
+          <Content city={PLACES[activePlace].name}
+                   cityID={PLACES[activePlace].cityID}
+                   key={activePlace}
+          />
+        </div>
+      </div>
+    </Context.Provider>
   );
 }
 
