@@ -2,7 +2,7 @@ li {
   padding: 2px 0;
 }
 button {
-  font-family: 'Roboto', sans-serif;
+  
   width: 160px;
   height: 35px;
   margin: 0 auto;
@@ -19,11 +19,11 @@ button:hover {
 button:focus {
   outline: 0;
 }
-.color{
+.color {
   background-color: grey;
   color: white;
 }
-@media only screen and (max-width : 992px) {
+@media screen and (max-width: 992px) {
   button {
     height: 60px;
     width: 125px;
