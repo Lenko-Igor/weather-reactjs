@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import ListCitys from './components/ListCitys.js'
 import Content from './components/Content.js'
 import Context from './context.js'
+import Header from './components/Header.js'
 
 function App() {
   const PLACES = [
@@ -23,10 +24,7 @@ function App() {
   return (
     <Context.Provider value={{removeContent, activePlace}}>
       <div className="container">
-        <h1>Погода в Республике Беларусь<br/>
-        <span>(из сервиса openweathermap)</span>
-        </h1>
-        <hr/>
+        <Header />
         <div className='wrapper'>
           <ListCitys citys={PLACES}/>
           <Content city={PLACES[activePlace].name}

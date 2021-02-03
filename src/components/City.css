@@ -2,7 +2,7 @@ li {
   padding: 2px 0;
 }
 button {
-  
+  background-color: #45e9ef42;
   width: 160px;
   height: 35px;
   margin: 0 auto;
@@ -11,16 +11,17 @@ button {
   font-weight: bold;
   cursor: pointer;
   border: none;
+
 }
 button:hover {
-  background-color: grey;
+  background-color:#05a0a5;
   color: white;
 }
 button:focus {
   outline: 0;
 }
 .color {
-  background-color: grey;
+  background-color: #05a0a5;
   color: white;
 }
 @media screen and (max-width: 992px) {

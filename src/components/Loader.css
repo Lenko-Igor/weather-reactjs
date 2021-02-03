@@ -79,6 +79,6 @@
 }
 @media only screen and (max-width: 992px) {
   .lds-spinner {
-    margin: 45px 45px;
+    margin: 150px 65px;
   }
 }

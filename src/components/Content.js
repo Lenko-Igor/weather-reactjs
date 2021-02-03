@@ -33,10 +33,17 @@ function Content({city, cityID}){
 
     return(
       <div className='content'>
-        <h3>В городе {placeName} сейчас {weather.description}</h3>
+        <h3>В городе {placeName}:</h3>
+        <p>{weather.description}</p>
         <img src={iconUrl} alt={weather.description}/>
-        <p>Температура: <strong>{weatherData.main.temp}°C</strong></p>
-        <p>Скорость ветра: <strong>{weatherData.wind.speed} м/с</strong></p>
+        <p>Температура:<br/>
+          <span style={(weatherData.main.temp>0)? {color:'red'} : {color:'blue'}}>
+            {weatherData.main.temp}°C
+          </span>
+        </p>
+        <p>Скорость ветра:<br/>
+          <span>{weatherData.wind.speed} м/с</span>
+        </p>
       </div>
     )
   }

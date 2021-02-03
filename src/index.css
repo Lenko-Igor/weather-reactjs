@@ -9,12 +9,15 @@
 }
 .container {
   width: 800px;
-  margin: 0 auto;
-  padding-top: 100px;
+  margin: 15px auto;
+  padding: 15px;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
+  background-color: rgb(233, 233, 231);
 }
 .wrapper {
   display: flex;
   padding-top: 15px;
+  border-top: 1px solid rgb(151, 150, 150);
 }
 h1 {
   text-align: center;
